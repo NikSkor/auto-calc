@@ -11,6 +11,45 @@
   <title>Auto calculator</title>
 </head>
 <body>
-  
+  <main class="main">
+    <div class="main__container container">
+      <div class="selector">
+        <form class="selector__form form">
+          <fieldset>
+            <p><label> <input type="radio" name="season" required value="summer">Лето</label></p>
+            <p><label> <input type="radio" name="season" required value="winter">Зима</label></p>
+          </fieldset>
+          <fieldset>
+            <label>Выберите спорткар: <select name="carType" required>
+                <option value="Porsche 911 GTR">Porsche 911 GTR</option>
+                <option value="Bmv">Bmv</option>
+                <option value="Chevrolet">Chevrolet</option>
+              </select></label>
+          </fieldset>
+          <button class="form__submit">
+            Забронировать спорткар
+          </button>
+          <fieldset>
+            <div class="form__calc calc">
+              <div class="calc__date">
+                <span class="calc__subtitle">Выберите трек-день</span>
+                <input type="date" name="date">
+              </div>
+              <div class="calc__value">
+                <span class="calc__subtitle">Количество сессий</span>
+                <input type="number" name="number">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        
+      </div>
+      <!-- /.selector -->
+      <div class="booking">
+        
+      </div>
+      <!-- /.booking -->
+    </div>
+  </main>
 </body>
 </html>
