@@ -1,10 +1,12 @@
 :root {
   --mainColor: #000000;
+  --white: #FFF;
+  --red: #EC1C23;
   --secondColor: #333333;
   --lime-green: #66C05D;
   --light-gray: #EFEFEF;
   --dark-gray: #E5E5E5;
-  --font-color: #3F4E65;
+  --gray-color: #3F4E65;
   --bg-color: rgba(229, 229, 229, .1);
 }
 
@@ -27,9 +29,9 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  background-color:var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--font-color);
-  /* font-feature-settings: 'pnum' on, 'lnum' on; */
+  font-feature-settings: 'pnum'on, 'lnum'on;
 }
 
 
@@ -106,9 +108,259 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .container {
-  --max-width: 1366px;
+  --max-width: 1579px;
   --padding: 30px;
   max-width: calc(var(--max-width) + var(--padding) * 2);
   padding: 0 var(--padding);
   margin: 0 auto;
+}
+
+.main__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--mainColor);
+  margin-top: 50px;
+  margin-bottom: 92px;
+  font-size: 50px;
+  letter-spacing: 0;
+}
+
+.main__block {
+  display: flex;
+  background-color: #1D2327;
+  padding: 145px 139px 122px 136px;
+  gap: 160px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+/* .form {
+  display: flex;
+  flex-direction: column;
+} */
+
+.form_radio_btn {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 40px;
+}
+
+.form_radio_btn input[type=radio] {
+  display: none;
+}
+
+.form_radio_btn label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 34px;
+  user-select: none;
+  background-color: var(--mainColor);
+}
+
+/* Checked */
+.form_radio_btn input[type=radio]:checked+label {
+  background: var(--red);
+}
+
+.form_radio_btn label {
+  transition: all 0.5s;
+}
+
+/* Hover */
+.form_radio_btn label:hover {
+  color: var(--gray-color);
+}
+
+/* Disabled
+.form_radio_btn input[type=radio]:disabled+label {
+  background: #efefef;
+  color: #666;
+} */
+
+.form__select {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--white);
+  text-transform: uppercase;
+  /* margin-bottom: 20px; */
+}
+
+.choices {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 250px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--white);
+  background-color: var(--mainColor);
+}
+
+.choices__inner,
+.choices__list {
+  background-color: var(--mainColor);
+  border: none;
+}
+
+.choices__list {
+  padding-left: 53px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: var(--white);
+  color: var(--mainColor);
+  /* padding-left: 0; */
+
+}
+
+.choices__list--dropdown {
+  padding-left: 0;
+}
+
+.choices__item {
+  color: var(--white);
+}
+
+.choices[data-type*=select-one]:after {
+  content: '';
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-color: var(--red) transparent transparent;
+  border-width: 7px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -2.5px;
+  pointer-events: none;
+}
+
+.form__submit {
+  background-color: var(--red);
+  padding: 20px 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  max-width: 305px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  transition: all 0.5s;
+}
+
+.form__submit:hover {
+  background-color: var(--mainColor);
+  color: var(--gray-color);
+}
+
+.calc {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-bottom: 87px;
+}
+
+.calc__subtitle {
+  font-size: 20px;
+}
+
+.calc__block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calc__inputDate {
+  background-color: var(--mainColor);
+  padding: 12px 20px;
+  font-family: "Roboto Mono", monospace;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: #505050;
+  cursor: pointer;
+  height: 42px;
+}
+
+.calc__inputDate::-webkit-calendar-picker-indicator {
+  background-image: url('../img/calendar.svg');
+  background-origin: content-box;
+  background-size: contain;
+  block-size: 1em;
+  inline-size: 1em;
+  opacity: 1;
+  background-repeat: no-repeat;
+  outline: none;
+  padding: 2px;
+  width: 18px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.calc__inputDate::-webkit-calendar-picker-indicator:hover {
+  background-image: url('../img/calendar-white.svg');
+}
+
+.calc__inputBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 111px;
+  height: 42px;
+  background-color: var(--mainColor);
+  color: var(--white);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.calc__inputNumber {
+
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.calc__left {
+  width: 8px;
+  height: 13px;
+  background-image: url('../img/arrow-left.svg');
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: contain;
+  z-index: 10;
+  left: -1px;
+  cursor: pointer;
+}
+
+.calc__right {
+  width: 8px;
+  height: 13px;
+  background-image: url('../img/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: contain;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.price__subtitle {
+  color: var(--red);
+  font-size: 22px;
+  margin-left: 15px;
+}
+
+.form__img {
+  margin-top: 40px;
 }

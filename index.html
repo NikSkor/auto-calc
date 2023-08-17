@@ -7,49 +7,71 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <title>Auto calculator</title>
 </head>
 <body>
+  <h1 class="visually-hidden">Бронирование автомобилей</h1>
   <main class="main">
     <div class="main__container container">
-      <div class="selector">
-        <form class="selector__form form">
-          <fieldset>
-            <p><label> <input type="radio" name="season" required value="summer">Лето</label></p>
-            <p><label> <input type="radio" name="season" required value="winter">Зима</label></p>
-          </fieldset>
-          <fieldset>
-            <label>Выберите спорткар: <select name="carType" required>
+    <h2 class="main__title">Забронировать спорткар</h2>
+      <div class="main__block">
+        <div class="main__selector selector">
+          <form class="selector__form form">
+            <fieldset>
+              <div class="form_radio_btn">
+                <input id="radio-1" type="radio" name="radio" value="summer" checked>
+                <label for="radio-1" class="form__radioName">ЛЕТО</label>
+              </div>
+              
+              <div class="form_radio_btn">
+                <input id="radio-2" type="radio" name="radio" value="winter">
+                <label for="radio-2" class="form__radioName">ЗИМА</label>
+              </div>
+            </fieldset>
+            <fieldset class="form__select">
+              <span class="form__subtitle">Выберите спорткар:</span>
+              <select class="js-choice" id="carType" required>
                 <option value="Porsche 911 GTR">Porsche 911 GTR</option>
-                <option value="Bmv">Bmv</option>
-                <option value="Chevrolet">Chevrolet</option>
-              </select></label>
-          </fieldset>
-          <button class="form__submit">
-            Забронировать спорткар
-          </button>
-          <fieldset>
-            <div class="form__calc calc">
-              <div class="calc__date">
-                <span class="calc__subtitle">Выберите трек-день</span>
-                <input type="date" name="date">
+                <option value="Bmv M2">Bmv M2</option>
+                <option value="Chevrolet Corvette">Chevrolet Corvette</option>
+                </select>
+            </fieldset>
+            <button class="form__submit">
+              Забронировать спорткар
+            </button>
+            <fieldset>
+              <div class="form__calc calc">
+                <div class="calc__date calc__block">
+                  <span class="calc__subtitle form__subtitle">Выберите трек-день</span>
+                  <input type="date" name="date" class="calc__inputDate">
+                </div>
+                <div class="calc__value calc__block">
+                  <span class="calc__subtitle form__subtitle">Количество сессий</span>
+                  <div class="calc__inputBlock">
+                    <div class="calc__left"></div>
+                    <span class="calc__inputNumber">1</span>
+                    <div class="calc__right"></div>
+                  </div>
+                </div>
               </div>
-              <div class="calc__value">
-                <span class="calc__subtitle">Количество сессий</span>
-                <input type="number" name="number">
-              </div>
-            </div>
-          </fieldset>
-        </form>
+            </fieldset>
+            <span class="form__subtitle form__price price">Стоимость:<span class="form__subtitle price__subtitle">10 000 ₽</span></span>
+            <img class="form__img" src="./img/car.png" alt="Автомобиль">
+          </form>
         
+        </div>
+        <!-- /.selector -->
+        <div class="booking">
+          <h3>dfsdfg</h3>
+        </div>
+        <!-- /.booking -->
       </div>
-      <!-- /.selector -->
-      <div class="booking">
-        
-      </div>
-      <!-- /.booking -->
+      
     </div>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
