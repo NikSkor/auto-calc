@@ -16,9 +16,9 @@
   <main class="main">
     <div class="main__container container">
     <h2 class="main__title">Забронировать спорткар</h2>
-      <div class="main__block">
+      <form class="main__block">
         <div class="main__selector selector">
-          <form class="selector__form form">
+          <div class="selector__form form">
             <div class="form__radio">
               <div class="form_radio_btn">
                 <input id="radio-1" type="radio" name="radio" value="summer" checked>
@@ -62,7 +62,7 @@
                   ₽</span></span>
               <img class="form__img" src="./img/car.png" alt="Автомобиль">
             </div>
-          </form>
+          </div>
         
         </div>
         <!-- /.selector -->
@@ -72,7 +72,7 @@
             <p class="booking__description">Оплата осуществляется только после согласования всех условий заезда (дата, спорткар, автодром)
             </p>
           </div>
-          <form class="booking__form formBooking">
+          <div class="booking__form formBooking">
             <input class="formBooking__inputText" placeholder="ВАШЕ ИМЯ" type="text">
             <input class="formBooking__inputText" placeholder="НОМЕР ТЕЛЕФОНА" type="text">
             <input class="formBooking__inputText" placeholder="EMAIL" type="text">
@@ -83,10 +83,10 @@
             <label class = "formBooking__checkboxLabel">
               <input type="checkbox" class="formBooking__checkbox">
               Согласен на обработку персональных данных</label>
-          </form>
+          </div>
         </div>
         <!-- /.booking -->
-      </div>
+      </form>
       
     </div>
   </main>
