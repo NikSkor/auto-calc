@@ -19,7 +19,7 @@
       <div class="main__block">
         <div class="main__selector selector">
           <form class="selector__form form">
-            <fieldset>
+            <div class="form__radio">
               <div class="form_radio_btn">
                 <input id="radio-1" type="radio" name="radio" value="summer" checked>
                 <label for="radio-1" class="form__radioName">ЛЕТО</label>
@@ -29,42 +29,63 @@
                 <input id="radio-2" type="radio" name="radio" value="winter">
                 <label for="radio-2" class="form__radioName">ЗИМА</label>
               </div>
-            </fieldset>
-            <fieldset class="form__select">
-              <span class="form__subtitle">Выберите спорткар:</span>
-              <select class="js-choice" id="carType" required>
-                <option value="Porsche 911 GTR">Porsche 911 GTR</option>
-                <option value="Bmv M2">Bmv M2</option>
-                <option value="Chevrolet Corvette">Chevrolet Corvette</option>
+            </div>
+            <div class="form__choiceBlock">
+              <div class="form__select">
+                <span class="form__subtitle">Выберите спорткар:</span>
+                <select class="js-choice" id="carType">
+                  <option value="Porsche 911 GTR">Porsche 911 GTR</option>
+                  <option value="Bmv M2">Bmv M2</option>
+                  <option value="Chevrolet Corvette">Chevrolet Corvette</option>
                 </select>
-            </fieldset>
-            <button class="form__submit">
-              Забронировать спорткар
-            </button>
-            <fieldset>
-              <div class="form__calc calc">
-                <div class="calc__date calc__block">
-                  <span class="calc__subtitle form__subtitle">Выберите трек-день</span>
-                  <input type="date" name="date" class="calc__inputDate">
-                </div>
-                <div class="calc__value calc__block">
-                  <span class="calc__subtitle form__subtitle">Количество сессий</span>
-                  <div class="calc__inputBlock">
-                    <div class="calc__left"></div>
-                    <span class="calc__inputNumber">1</span>
-                    <div class="calc__right"></div>
+              </div>
+              <button class="form__submit">
+                Забронировать спорткар
+              </button>
+              <div>
+                <div class="form__calc calc">
+                  <div class="calc__date calc__block">
+                    <span class="calc__subtitle form__subtitle">Выберите трек-день</span>
+                    <input type="date" name="date" class="calc__inputDate">
+                  </div>
+                  <div class="calc__value calc__block">
+                    <span class="calc__subtitle form__subtitle">Количество сессий</span>
+                    <div class="calc__inputBlock">
+                      <div class="calc__left"></div>
+                      <span class="calc__inputNumber">1</span>
+                      <div class="calc__right"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </fieldset>
-            <span class="form__subtitle form__price price">Стоимость:<span class="form__subtitle price__subtitle">10 000 ₽</span></span>
-            <img class="form__img" src="./img/car.png" alt="Автомобиль">
+            </div>
+            <div class="form__priceBlock">
+              <span class="form__subtitle form__price price">Стоимость:<span class="form__subtitle price__subtitle">10 000
+                  ₽</span></span>
+              <img class="form__img" src="./img/car.png" alt="Автомобиль">
+            </div>
           </form>
         
         </div>
         <!-- /.selector -->
         <div class="booking">
-          <h3>dfsdfg</h3>
+          <div class="booking__header">
+            <h3 class="form__subtitle">Укажите контактные данные</h3>
+            <p class="booking__description">Оплата осуществляется только после согласования всех условий заезда (дата, спорткар, автодром)
+            </p>
+          </div>
+          <form class="booking__form formBooking">
+            <input class="formBooking__inputText" placeholder="ВАШЕ ИМЯ" type="text">
+            <input class="formBooking__inputText" placeholder="НОМЕР ТЕЛЕФОНА" type="text">
+            <input class="formBooking__inputText" placeholder="EMAIL" type="text">
+            <textarea class="formBooking__textarea" placeholder="КОММЕНТАРИЙ"></textarea>
+            <button class="form__submit formBooking__submit">
+              Забронировать
+            </button>
+            <label class = "formBooking__checkboxLabel">
+              <input type="checkbox" class="formBooking__checkbox">
+              Согласен на обработку персональных данных</label>
+          </form>
         </div>
         <!-- /.booking -->
       </div>
