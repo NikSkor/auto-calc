@@ -21,12 +21,12 @@
           <div class="selector__form form">
             <div class="form__radio">
               <div class="form_radio_btn">
-                <input id="radio-1" type="radio" name="radio" value="summer" checked>
+                <input id="radio-1" type="radio" name="season" value="summer" checked>
                 <label for="radio-1" class="form__radioName">ЛЕТО</label>
               </div>
               
               <div class="form_radio_btn">
-                <input id="radio-2" type="radio" name="radio" value="winter">
+                <input id="radio-2" type="radio" name="season" value="winter">
                 <label for="radio-2" class="form__radioName">ЗИМА</label>
               </div>
             </div>
@@ -39,7 +39,7 @@
                   <option value="Chevrolet Corvette">Chevrolet Corvette</option>
                 </select>
               </div>
-              <button class="form__submit">
+              <button class="form__submit" id="submit">
                 Забронировать спорткар
               </button>
               <div class="form__calc calc">
@@ -73,15 +73,15 @@
             </p>
           </div>
           <div class="booking__form formBooking">
-            <input class="formBooking__inputText" placeholder="ВАШЕ ИМЯ" type="text">
-            <input class="formBooking__inputText" placeholder="НОМЕР ТЕЛЕФОНА" type="text">
-            <input class="formBooking__inputText" placeholder="EMAIL" type="text">
-            <textarea class="formBooking__textarea" placeholder="КОММЕНТАРИЙ"></textarea>
-            <button class="form__submit formBooking__submit">
+            <input class="formBooking__inputText" name="name" placeholder="ВАШЕ ИМЯ" type="text">
+            <input class="formBooking__inputText" name="phone" placeholder="НОМЕР ТЕЛЕФОНА" type="text">
+            <input class="formBooking__inputText" name="mail" placeholder="EMAIL" type="text">
+            <textarea class="formBooking__textarea" name="comment" placeholder="КОММЕНТАРИЙ"></textarea>
+            <button class="form__submit formBooking__submit" id="submitBtn">
               Забронировать
             </button>
             <label class = "formBooking__checkboxLabel">
-              <input type="checkbox" class="formBooking__checkbox">
+              <input type="checkbox" name="accept" class="formBooking__checkbox">
               Согласен на обработку персональных данных</label>
           </div>
         </div>
